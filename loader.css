@@ -1,0 +1,93 @@
+body {
+    background:  #1d1d1d;
+  }
+  .loader { 
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+  .loader::before,
+  .loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #aa1605;
+    position: absolute;
+    animation: load 0.9s infinite alternate ease-in-out;
+  }
+  .loader::before {
+    top: 0;
+  }
+  .loader::after {
+    bottom: 0;
+  }
+  #logo-loader{
+    height: 100%;
+    width: 100%;
+  }
+  @keyframes load {
+    0% {
+      left:-30px;
+      height: 30px;
+      width: 15px;
+    }
+    50% {
+      height: 8px;
+      width: 40px;
+    }
+    100% {
+      left: 255px;
+      height: 30px;
+      width: 15px;
+    }
+  }
+  @media screen and (min-width: 1024px){
+    .loader{
+        width: 550px;
+        height: 100px; 
+    }
+    @keyframes load {
+        0% {
+          left:-25px;
+          height: 30px;
+          width: 15px;
+        }
+        50% {
+          height: 8px;
+          width: 40px;
+        }
+        100% {
+          left: 550px;
+          height: 30px;
+          width: 15px;
+        }
+
+  }
+
+  }
+  @media screen and (min-width: 630px) and (max-width: 1023px){
+    .loader{
+        width: 300px;
+        height: 80px;  
+    }
+    @keyframes load {
+        0% {
+          left:-25px;
+          height: 30px;
+          width: 15px;
+        }
+        50% {
+          height: 8px;
+          width: 40px;
+        }
+        100% {
+          left: 300px;
+          height: 30px;
+          width: 15px;
+        }
+  }
+}
